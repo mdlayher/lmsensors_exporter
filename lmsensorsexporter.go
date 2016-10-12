@@ -14,14 +14,6 @@ const (
 	namespace = "lmsensors"
 )
 
-var _ Scanner = &lmsensors.Scanner{}
-
-// A Scanner is a type that can scan for lmsensors devices.  Scanner is
-// implemented by *lmsensors.Scanner.
-type Scanner interface {
-	Scan() ([]*lmsensors.Device, error)
-}
-
 // An Exporter is a Prometheus exporter for lmsensors metrics.
 // It wraps all lmsensors metrics collectors and provides a single global
 // exporter which can serve metrics.
@@ -29,13 +21,13 @@ type Scanner interface {
 // It implements the prometheus.Collector interface in order to register
 // with Prometheus.
 type Exporter struct {
-	s Scanner
+	s *lmsensors.Scanner
 }
 
 var _ prometheus.Collector = &Exporter{}
 
 // New creates a new Exporter which collects metrics using the input Scanner.
-func New(s Scanner) *Exporter {
+func New(s *lmsensors.Scanner) *Exporter {
 	return &Exporter{
 		s: s,
 	}
