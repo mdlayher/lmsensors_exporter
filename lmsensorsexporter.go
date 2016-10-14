@@ -63,6 +63,7 @@ func (e *Exporter) withCollectors(fn func(cs []prometheus.Collector)) {
 	}
 
 	cs := []prometheus.Collector{
+		NewCurrentCollector(devices),
 		NewFanCollector(devices),
 		NewIntrusionCollector(devices),
 		NewTemperatureCollector(devices),
