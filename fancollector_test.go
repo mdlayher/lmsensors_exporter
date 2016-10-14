@@ -30,8 +30,8 @@ func TestFanCollector(t *testing.T) {
 				Name: "it8728-00",
 				Sensors: []lmsensors.Sensor{
 					&lmsensors.FanSensor{
-						Name:    "fan1",
-						Current: 1000,
+						Name:  "fan1",
+						Input: 1000,
 					},
 				},
 			}},
@@ -47,13 +47,13 @@ func TestFanCollector(t *testing.T) {
 					Name: "it8728-00",
 					Sensors: []lmsensors.Sensor{
 						&lmsensors.FanSensor{
-							Name:    "fan1",
-							Current: 1010,
+							Name:  "fan1",
+							Input: 1010,
 						},
 						&lmsensors.FanSensor{
-							Name:    "fan2",
-							Current: 0,
-							Alarm:   true,
+							Name:  "fan2",
+							Input: 0,
+							Alarm: true,
 						},
 					},
 				},
@@ -61,8 +61,8 @@ func TestFanCollector(t *testing.T) {
 					Name: "it8728-01",
 					Sensors: []lmsensors.Sensor{
 						&lmsensors.FanSensor{
-							Name:    "fan1",
-							Current: 998,
+							Name:  "fan1",
+							Input: 998,
 						},
 						&lmsensors.IntrusionSensor{
 							Name:  "intrusion0",

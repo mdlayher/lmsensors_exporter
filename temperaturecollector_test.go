@@ -30,9 +30,9 @@ func TestTemperatureCollector(t *testing.T) {
 				Name: "coretemp-00",
 				Sensors: []lmsensors.Sensor{
 					&lmsensors.TemperatureSensor{
-						Name:    "temp1",
-						Label:   "Core 1",
-						Current: 42.0,
+						Name:  "temp1",
+						Label: "Core 1",
+						Input: 42.0,
 					},
 				},
 			}},
@@ -48,15 +48,15 @@ func TestTemperatureCollector(t *testing.T) {
 					Name: "coretemp-00",
 					Sensors: []lmsensors.Sensor{
 						&lmsensors.TemperatureSensor{
-							Name:    "temp1",
-							Label:   "Core 1",
-							Current: 42.0,
+							Name:  "temp1",
+							Label: "Core 1",
+							Input: 42.0,
 						},
 						&lmsensors.TemperatureSensor{
-							Name:    "temp2",
-							Label:   "Core 2",
-							Current: 60.2,
-							Alarm:   true,
+							Name:  "temp2",
+							Label: "Core 2",
+							Input: 60.2,
+							Alarm: true,
 						},
 					},
 				},
@@ -64,12 +64,12 @@ func TestTemperatureCollector(t *testing.T) {
 					Name: "it8728-00",
 					Sensors: []lmsensors.Sensor{
 						&lmsensors.FanSensor{
-							Name:    "fan1",
-							Current: 1010,
+							Name:  "fan1",
+							Input: 1010,
 						},
 						&lmsensors.TemperatureSensor{
-							Name:    "temp1",
-							Current: 43.0,
+							Name:  "temp1",
+							Input: 43.0,
 						},
 					},
 				},

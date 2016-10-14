@@ -54,8 +54,8 @@ func TestIntrusionCollector(t *testing.T) {
 					Name: "it8728-01",
 					Sensors: []lmsensors.Sensor{
 						&lmsensors.FanSensor{
-							Name:    "fan1",
-							Current: 998,
+							Name:  "fan1",
+							Input: 998,
 						},
 						&lmsensors.IntrusionSensor{
 							Name:  "intrusion0",

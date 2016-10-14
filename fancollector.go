@@ -75,7 +75,7 @@ func (c *FanCollector) Collect(ch chan<- prometheus.Metric) {
 			ch <- prometheus.MustNewConstMetric(
 				c.RPM,
 				prometheus.GaugeValue,
-				float64(fs.Current),
+				float64(fs.Input),
 				labels...,
 			)
 

@@ -76,7 +76,7 @@ func (c *TemperatureCollector) Collect(ch chan<- prometheus.Metric) {
 			ch <- prometheus.MustNewConstMetric(
 				c.DegreesCelsius,
 				prometheus.GaugeValue,
-				ts.Current,
+				ts.Input,
 				labels...,
 			)
 

@@ -30,9 +30,9 @@ func TestVoltageCollector(t *testing.T) {
 				Name: "it8728-00",
 				Sensors: []lmsensors.Sensor{
 					&lmsensors.VoltageSensor{
-						Name:    "in1",
-						Label:   "Vbat",
-						Current: 3.29,
+						Name:  "in1",
+						Label: "Vbat",
+						Input: 3.29,
 					},
 				},
 			}},
@@ -48,15 +48,15 @@ func TestVoltageCollector(t *testing.T) {
 					Name: "it8728-00",
 					Sensors: []lmsensors.Sensor{
 						&lmsensors.VoltageSensor{
-							Name:    "in1",
-							Label:   "Vbat",
-							Current: 3.29,
+							Name:  "in1",
+							Label: "Vbat",
+							Input: 3.29,
 						},
 						&lmsensors.VoltageSensor{
-							Name:    "in2",
-							Label:   "3VSB",
-							Current: 6.12,
-							Alarm:   true,
+							Name:  "in2",
+							Label: "3VSB",
+							Input: 6.12,
+							Alarm: true,
 						},
 					},
 				},
@@ -64,12 +64,12 @@ func TestVoltageCollector(t *testing.T) {
 					Name: "it8728-01",
 					Sensors: []lmsensors.Sensor{
 						&lmsensors.FanSensor{
-							Name:    "fan1",
-							Current: 1010,
+							Name:  "fan1",
+							Input: 1010,
 						},
 						&lmsensors.VoltageSensor{
-							Name:    "in1",
-							Current: 3.10,
+							Name:  "in1",
+							Input: 3.10,
 						},
 					},
 				},

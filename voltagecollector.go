@@ -76,7 +76,7 @@ func (c *VoltageCollector) Collect(ch chan<- prometheus.Metric) {
 			ch <- prometheus.MustNewConstMetric(
 				c.Volts,
 				prometheus.GaugeValue,
-				vs.Current,
+				vs.Input,
 				labels...,
 			)
 
